@@ -46,6 +46,8 @@ Acknowledgement of free usage for icons:
 * CSS loading animation: https://css-loaders.com/dots/
 
 ## 4. File Contents
+
+```
 ├── .vs
 │  ├── BBY-29
 │  │  ├── config
@@ -198,6 +200,7 @@ Acknowledgement of free usage for icons:
     ├── item.ejs
     ├── taskFooter.ejs
     └── user.ejs
+```
 
 ## 5. Complete setup/installion/usage
 Our project uses the Iphone 14 Promax screen size for UI design. 
