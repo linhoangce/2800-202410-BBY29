@@ -16,7 +16,6 @@ FitUp stands out from the competition thanks to AI technologies integrated inclu
 
 Users can also enjoy better experience using the app thanks to our smart UI design.
 
-
 List team members and/or short bio's here... 
 * Davin Higo
 * Yuho Lim
@@ -47,34 +46,174 @@ Acknowledgement of free usage for icons:
 * CSS loading animation: https://css-loaders.com/dots/
 
 ## 4. File Contents
-├── .gitignore               # Git ignore file
-├── index.js               # landing HTML file, this is what users see when they come to url
-└── README.md
-└── utils.js
-└── databaseConnection.js 
-
-It has the following subfolders and files:
-├── .git                     
-├── html                   
-    
+├── .vs
+│  ├── BBY-29
+│  │  ├── config
+│  │  │  └── applicationhost.config
+│  │  ├── FileContentIndex
+│  │  │  ├── 4289698b-b92c-42df-9ca9-12259ee516ac.vsidx
+│  │  │  ├── 5d0b990f-d8d4-4b08-9da9-b637923eae58.vsidx
+│  │  │  └── 95b680c3-3183-424d-94d0-4192e2929250.vsidx
+│  │  └── v17
+│  │    ├── .wsuo
+│  │    └── DocumentLayout.json
+│  ├── ProjectSettings.json
+│  ├── slnx.sqlite
+│  └── VSWorkspaceState.json
+├── databaseConnection.js
+├── html
+│  ├── ai-training-camera-feed.html
+│  ├── ai-training-female-body-scan-result.html
+│  ├── ai-training-female-body-scan.html
+│  ├── ai-training-male-body-scan-result.html
+│  ├── ai-training-male-body-scan.html
+│  ├── ai-training-questions.html
+│  ├── ai-training-recommendation.html
+│  ├── ai-training-scan-request.html
+│  ├── aichat-loading.html
+│  ├── aichat-log.html
+│  ├── body-motion-capture.html
+│  └── map.html
 ├── img
-    └── text-to-speech-audio
-        /blah.mp3
-    /blah.png                
-    /blah.js  
-├── scripts  
-    blah.js             
-├── styles                   # Folder for styles
-    /blah.css                
-├── text
-    /blah.txt
-├── views
-    /blah.ejs
-## 5. Complete setup/installion/usage
-Our project uses the Iphone 14 Promax screen size for this project UI design. 
+│  ├── 04-add.svg
+│  ├── 22-user.svg
+│  ├── 23-user-group.svg
+│  ├── 35-home-general.svg
+│  ├── agility.gif
+│  ├── ai-assistant-bot.mp4
+│  ├── ai-assistant.mp4
+│  ├── ai-humannoid.png
+│  ├── aibot2.png
+│  ├── aibot3.png
+│  ├── back-seated-cable.gif
+│  ├── body-scan-icon.png
+│  ├── body-scan.png
+│  ├── body-scan1.png
+│  ├── boxing-basic.gif
+│  ├── bulking-diet.jpg
+│  ├── chatBotImg.png
+│  ├── chest-benchpress.gif
+│  ├── default-avatar.jpg
+│  ├── diet-nutrition.png
+│  ├── female-body-scan-result.glb
+│  ├── female-body-scan.mp4
+│  ├── female.mp4
+│  ├── fitup.png
+│  ├── friendly-bot.mp4
+│  ├── healthy-meal.png
+│  ├── jump.mp3
+│  ├── Logo.png
+│  ├── low-carbs.png
+│  ├── male-body-scan-result.glb
+│  ├── male-body-scan.mp4
+│  ├── male.mp4
+│  ├── mario.png
+│  ├── moutain-climb.gif
+│  ├── reroll.png
+│  ├── settings_gear.png
+│  ├── shop.png
+│  ├── Squat-Tuck-Jump.gif
+│  ├── squat.gif
+│  ├── text-to-speech-audios
+│  │  ├── /blah.mp3             # Audio output from Google Text to Speech API saved on local machine
+│  ├── user.png
+│  ├── wallpaper-header.png
+│  └── workout-paperwall-4.png
+├── index.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── scripts
+│  ├── ai-training-camera-feed.js
+│  ├── ai-training-female-body-scan-result.js
+│  ├── ai-training-female-body-scan.js
+│  ├── ai-training-male-body-scan-result.js
+│  ├── ai-training-male-body-scan.js
+│  ├── ai-training-questions.js
+│  ├── ai-training-recommendation.js
+│  ├── ai-training-scan-request.js
+│  ├── aichat-loading.js
+│  ├── aichat-log.js
+│  ├── audio-streaming.js
+│  ├── authentication.js
+│  ├── body-motion-capture.js
+│  ├── dietTasks.js
+│  ├── fitTasks.js
+│  ├── main.js
+│  ├── map.js
+│  └── speech-to-text.js
+├── styles
+│  ├── 404.css
+│  ├── ai-training-camera-feed.css
+│  ├── ai-training-find-coach.css
+│  ├── ai-training-home.css
+│  ├── ai-training-questions.css
+│  ├── ai-training-recommendation.css
+│  ├── ai-training-scan-request.css
+│  ├── aichat-config.css
+│  ├── aichat-home.css
+│  ├── aichat-loading.css
+│  ├── aichat-log.css
+│  ├── body-motion-capture.css
+│  ├── body-scan.css
+│  ├── change.css
+│  ├── community.css
+│  ├── communityPost.css
+│  ├── footer.css
+│  ├── index.css
+│  ├── main.css
+│  ├── mainOld.css
+│  ├── map.css
+│  ├── profile.css
+│  ├── style.css
+│  └── tasks.css
+├── utils.js
+└── views
+  ├── 403.ejs
+  ├── 404.ejs
+  ├── admin.ejs
+  ├── changeEmail.ejs
+  ├── changePassword.ejs
+  ├── changeUsername.ejs
+  ├── community.ejs
+  ├── communityPost.ejs
+  ├── dietTasks.ejs
+  ├── fitTasks.ejs
+  ├── index.ejs
+  ├── login.ejs
+  ├── main.ejs
+  ├── profile.ejs
+  ├── rankProgress.ejs
+  ├── reset-email.ejs
+  ├── reset-password.ejs
+  ├── shop.ejs
+  ├── signup.ejs
+  └── templates
+    ├── easteregg.ejs
+    ├── end.ejs
+    ├── footer.ejs
+    ├── header.ejs
+    ├── headerOld.ejs
+    ├── image.ejs
+    ├── item.ejs
+    ├── taskFooter.ejs
+    └── user.ejs
 
-Note: before running the app unsure you have added the proper .env file to the folder
-the .env will require the following variables. (GROQ_API_KEY, PORT, MONGODB_SESSION_SECRET, NODE_SESSION_SECRET, MONGO_URI, APP_PASSWORD, APP_EMAIL, GOOGLE_API_KEY, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET)
+## 5. Complete setup/installion/usage
+Our project uses the Iphone 14 Promax screen size for UI design. 
+
+Note: before running the app unsure you have added the proper .env file to the folder.
+The .env will require the following variables. 
+* GROQ_API_KEY, PORT
+* MONGODB_SESSION_SECRET 
+* NODE_SESSION_SECRET 
+* MONGO_URI
+* APP_PASSWORD
+* APP_EMAIL
+* GOOGLE_API_KEY
+* CLOUDINARY_CLOUD_NAME
+* CLOUDINARY_API_KEY
+* CLOUDINARY_API_SECRET
 
 You may need a google maps api key for the community and communityPost ejs files
 
@@ -125,6 +264,6 @@ Here are some known bugs:
 
 ## 11. Features for Future
 What we'd like to build in the future:
-* train the MoveNet model for pose detection so that I can give users real-time feedback on their postures and forms while exercising.
+* Train the MoveNet model for pose detection so that I can give users real-time feedback on their postures and forms while exercising.
 * Tasks generated by AI based on the users' level of fitness and interests.
-* Text to Speech - audio streaming of chat and recommendation for users with vision impairment or working out.
+* Text to Speech - audio streaming of chat and recommendation for users with vision impairment or are working out.
