@@ -47,185 +47,29 @@ Acknowledgement of free usage for icons:
 * CSS loading animation: https://css-loaders.com/dots/
 
 ## 4. File Contents
-│   .env
-│   .gitignore
-│   databaseConnection.js
-│   index.js
-│   package.json
-│   README.md
-│   utils.js
-│
-├───.vs
-│   │   ProjectSettings.json
-│   │   slnx.sqlite
-│   │   VSWorkspaceState.json
-│   │
-│   └───BBY-29
-│       ├───config
-│       │       applicationhost.config
-│       │
-│       ├───FileContentIndex
-│       │       4289698b-b92c-42df-9ca9-12259ee516ac.vsidx
-│       │       5d0b990f-d8d4-4b08-9da9-b637923eae58.vsidx
-│       │       95b680c3-3183-424d-94d0-4192e2929250.vsidx
-│       │
-│       └───v17
-│               .wsuo
-│               DocumentLayout.json
-│
-├───html
-│       ai-training-camera-feed.html
-│       ai-training-female-body-scan-result.html
-│       ai-training-female-body-scan.html
-│       ai-training-male-body-scan-result.html
-│       ai-training-male-body-scan.html
-│       ai-training-questions.html
-│       ai-training-recommendation.html
-│       ai-training-scan-request.html
-│       aichat-loading.html
-│       aichat-log.html
-│       body-motion-capture.html
-│       map.html
-│
-├───img
-│   │   04-add.svg
-│   │   22-user.svg
-│   │   23-user-group.svg
-│   │   35-home-general.svg
-│   │   agility.gif
-│   │   ai-assistant-bot.mp4
-│   │   ai-assistant.mp4
-│   │   ai-humannoid.png
-│   │   aibot2.png
-│   │   aibot3.png
-│   │   back-seated-cable.gif
-│   │   body-scan-icon.png
-│   │   body-scan.png
-│   │   body-scan1.png
-│   │   boxing-basic.gif
-│   │   bulking-diet.jpg
-│   │   chatBotImg.png
-│   │   chest-benchpress.gif
-│   │   diet-nutrition.png
-│   │   female-body-scan-result.glb
-│   │   female-body-scan.mp4
-│   │   female.mp4
-│   │   fitup.png
-│   │   friendly-bot.mp4
-│   │   healthy-meal.png
-│   │   jump.mp3
-│   │   Logo.png
-│   │   low-carbs.png
-│   │   male-body-scan-result.glb
-│   │   male-body-scan.mp4
-│   │   male.mp4
-│   │   mario.png
-│   │   moutain-climb.gif
-│   │   reroll.png
-│   │   settings_gear.png
-│   │   shop.png
-│   │   Squat-Tuck-Jump.gif
-│   │   squat.gif
-│   │   wallpaper-header.png
-│   │   workout-paperwall-4.png
-│   │
-│   └───text-to-speech-audios
-│           0c51a918-c3c7-44ee-8515-5215e3de0be1.mp3
-│           157ae306-fa7a-4d6e-88cf-dade1859ccec.mp3
-│           16f09ecf-2359-4228-b165-ed5983e4c6a3.mp3
-│           193d5518-58b1-4b55-87cb-9c025ca1f6c1.mp3
-│           1ec3cf6b-ee3a-4d07-8a35-db155f3afbf0.mp3
-│           2d2b66ef-3ad3-4fae-8810-5396063df095.mp3
-│           4fa3ef27-e2dd-4e30-847a-b2e072ecdbbb.mp3
-│           666f6d96-cf3e-4ec8-bb45-33ebf5503190.mp3
-│           75b6262a-149b-4840-bc4b-a85348a289d2.mp3
-│           86aab3f4-c9f4-431e-9f22-7071f888f042.mp3
-│           8f3558c5-9fd5-4d09-9b93-d511ed1cc44c.mp3
-│           91963943-1ea4-4db6-a63e-a4261d5f2c00.mp3
-│           9e2829a5-42f2-4b83-a3ba-8080bb05fafc.mp3
-│           a57823d9-dcb0-40a0-91c7-1f42a9f7b489.mp3
-│           a7ee8770-a58e-4873-85ae-910875857cd2.mp3
-│           aefa14bc-0a69-4747-9e74-72320ffa05d0.mp3
-│           e51e3145-d3e1-487d-92c0-44a86632c511.mp3
-│
-├───scripts
-│       ai-training-camera-feed.js
-│       ai-training-female-body-scan-result.js
-│       ai-training-female-body-scan.js
-│       ai-training-male-body-scan-result.js
-│       ai-training-male-body-scan.js
-│       ai-training-questions.js
-│       ai-training-recommendation.js
-│       ai-training-scan-request.js
-│       aichat-loading.js
-│       aichat-log.js
-│       audio-streaming.js
-│       authentication.js
-│       body-motion-capture.js
-│       dietTasks.js
-│       fitTasks.js
-│       main.js
-│       map.js
-│       speech-to-text.js
-│
-├───styles
-│       404.css
-│       ai-training-camera-feed.css
-│       ai-training-find-coach.css
-│       ai-training-home.css
-│       ai-training-questions.css
-│       ai-training-recommendation.css
-│       ai-training-scan-request.css
-│       aichat-config.css
-│       aichat-home.css
-│       aichat-loading.css
-│       aichat-log.css
-│       body-motion-capture.css
-│       body-scan.css
-│       change.css
-│       community.css
-│       communityPost.css
-│       footer.css
-│       index.css
-│       main.css
-│       mainOld.css
-│       map.css
-│       profile.css
-│       style.css
-│       tasks.css
-│
-└───views
-    │   403.ejs
-    │   404.ejs
-    │   admin.ejs
-    │   changeEmail.ejs
-    │   changePassword.ejs
-    │   changeUsername.ejs
-    │   community.ejs
-    │   communityPost.ejs
-    │   dietTasks.ejs
-    │   fitTasks.ejs
-    │   index.ejs
-    │   login.ejs
-    │   main.ejs
-    │   profile.ejs
-    │   rankProgress.ejs
-    │   reset-email.ejs
-    │   reset-password.ejs
-    │   shop.ejs
-    │   signup.ejs
-    │
-    └───templates
-            easteregg.ejs
-            end.ejs
-            footer.ejs
-            header.ejs
-            headerOld.ejs
-            image.ejs
-            item.ejs
-            taskFooter.ejs
-            user.ejs
+├── .gitignore               # Git ignore file
+├── index.js               # landing HTML file, this is what users see when they come to url
+└── README.md
+└── utils.js
+└── databaseConnection.js 
 
+It has the following subfolders and files:
+├── .git                     
+├── html                   
+    
+├── img
+    └── text-to-speech-audio
+        /blah.mp3
+    /blah.png                
+    /blah.js  
+├── scripts  
+    blah.js             
+├── styles                   # Folder for styles
+    /blah.css                
+├── text
+    /blah.txt
+├── views
+    /blah.ejs
 ## 5. Complete setup/installion/usage
 Our project uses the Iphone 14 Promax screen size for this project UI design. 
 
