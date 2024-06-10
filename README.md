@@ -16,7 +16,7 @@ FitUp stands out from the competition thanks to AI technologies integrated inclu
 
 Users can also enjoy better experience using the app thanks to our smart UI design.
 
-List team members and/or short bio's here... 
+Team members:
 * Davin Higo
 * Yuho Lim
 * Declan Joyce
@@ -24,7 +24,7 @@ List team members and/or short bio's here...
 * Linh Hoang
 	
 ## 3. Technologies and Resources Used
-List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
+
 * HTML, CSS, JavaScript
 * Bootstrap 5.0 (Frontend library)
 * MongoDB (BAAS - Backend as a Service)
@@ -37,12 +37,10 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * Blender (Frontend)
 * Tensorflor MoveNet (Frontend)
 
-Acknowledgement of free usage for icons:
+Acknowledgement of usage:
 * main - leaderboard : https://codepen.io/MalunariDev/pen/RweGGxx
 * main - icon : https://www.strangeicons.com/
-
 * Exercise source: https://fitnessprogramer.com/exercise/bench-press/?pw=75448
-
 * CSS loading animation: https://css-loaders.com/dots/
 
 ## 4. File Contents
@@ -203,10 +201,11 @@ Acknowledgement of free usage for icons:
 ```
 
 ## 5. Complete setup/installion/usage
-Our project uses the Iphone 14 Promax screen size for UI design. 
 
-Note: before running the app unsure you have added the proper .env file to the folder.
-The .env will require the following variables. 
+Our project focused solely on UI design for the Iphone 14 Promax screen size.
+
+Before running the app, make sure to add a .env file to the folder. The .env will require the following variables. 
+
 * GROQ_API_KEY, PORT
 * MONGODB_SESSION_SECRET 
 * NODE_SESSION_SECRET 
@@ -218,9 +217,9 @@ The .env will require the following variables.
 * CLOUDINARY_API_KEY
 * CLOUDINARY_API_SECRET
 
-You may need a google maps api key for the community and communityPost ejs files
+You may need a Google Maps API key for maps.
 
-To install download the folder then in a terminal navigate to the folder and run the following
+To install, run the following commands:
 
 npm i
 node index.js
@@ -228,21 +227,23 @@ node index.js
 Testing Plan: https://docs.google.com/spreadsheets/d/10ylqpRkL9dYpFuuqNc5xzxkXSeOpcru4Y1LLDA1xn7o/edit#gid=394496370
 
 ## 6. How to use
-To start login/signup from the landing page (if you forgot your password click login and click reset email and fill in you email and follow the instrucitons send to you)
-After logging in you can change your info (add profile picture, change username, change email, change password) in the profile, log out, view rank progress
 
-In the main page you can see your tasks and click them to go to the tasks page and reroll tasks if you want to change them or if you completed the task click done and get points
+To start, login/signup from the landing page (if you forgot your password click login and click reset email and fill in you email and follow the instrucitons send to you).
 
-Rerolls are purchasable with in app currency in the shop along with some other things life gift cards, spending points and points are speperate
+After logging in you can change your info (add profile picture, change username, change email, change password) in the profile, log out, view rank progress.
 
-There is a leaderboard where users can compete for the top 5 to get additional points or rewards
+In the main page, you can view your tasks and click them get instructions plus pose detection feature for exercises to complete them (for fitness tasks only). Once finishing a taks, go to the task page to check it off and earn your points.
 
-You can also ask questions to an ai chatbot using text or speech to text or get reccomedations for a workout personalized to you after a body scan and you can get coached in proper workout posture by the ai camera
+Rerolls are purchasable with in app currency in the shop along with some other things such as gift cards.
 
-There is also a community page for users to share/see posts
+There is a leaderboard where users can compete with friends and family members.
+
+You can also ask questions or get reccomedations from AI. Some other features including speech recognition, body scan and 3D body scan model for personal evaluation (conceptual features only)
+
+Users can post and share their updates on the community page as well.
 
 EASTER EGG
-In the landing, login, and signup page if you input the konami code Arrow keys [up, up, down, down, left, right, left, right] then [B, A] with no other input in between a mario will jump
+In the landing, login, and signup page if you input the konami code Arrow keys [up, up, down, down, left, right, left, right] then [B, A] with no other input in between, and you'll find out... Hope you will like it!
 
 ## 8. AI Use
 
