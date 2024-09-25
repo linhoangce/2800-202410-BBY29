@@ -35,7 +35,7 @@ Team members:
 * Node.js (Backend)
 * THREE.js (Frontend)
 * Blender (Frontend)
-* Tensorflor MoveNet (Frontend)
+* Tensorflow.js MoveNet (Frontend)
 
 Acknowledgement of usage:
 * main - leaderboard : https://codepen.io/MalunariDev/pen/RweGGxx
