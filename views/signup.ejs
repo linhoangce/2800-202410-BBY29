@@ -17,7 +17,7 @@
 			<% } %>
 
 
-				<form class="login" action="/signup" method="POST" class="index-form center">
+				<form class="login-form" action="/signup" method="POST" class="index-form center">
 					<% if (typeof errorMessage !=='undefined' && errorMessage) { %>
 						<input type="text" name="username" placeholder="Username" class="border"
 							value="<%= typeof username !== 'undefined' ? username : '' %>">
@@ -31,7 +31,7 @@
 							<% } %>
 				</form>
 
-				<div style="gap: 12%; width: 100%; display: flex; justify-content: center;">
+				<div style="gap: 12%; width: 100%; display: flex; justify-content: center; margin-top: 20px;">
 					<!-- Go Back button -->
 					<button type="button" class="index-btn top-left" style="width: 35%;"
 						onclick="location.href='/';">
