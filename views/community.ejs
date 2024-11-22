@@ -30,18 +30,55 @@
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FitUp</title>
+    <meta name="Comp2800 template" content="FitUp">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+    <!-- favicon -->
+    <link rel="icon" href="/img/fitup.png">
+
+    <!-- Other libraries CSS CDN go here -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Other Libraries JS CDN go here -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Community</title>
     <link rel="stylesheet" type="text/css" href="../../styles/community.css" text="">
     <link rel="stylesheet" type="text/css" href="../../styles/mainOld.css" text="">
 </head>
+    <link rel="stylesheet" type="text/css" href="../../styles/mainOld.css" text="">
+</head>
 
+<body>
 <body>
     <div class="header">
         <p class="headerTitle">Community posts</p>
         <a id="go-back" onclick="goBack()">Back</a>
+        <a id="go-back" onclick="goBack()">Back</a>
     </div>
 
     <div class="header2">
+
 
         <!-- add post -->
         <span class="add-post-container">
@@ -49,6 +86,7 @@
                 <button class="addPost">Add Post</button>
             </a>
         </span>
+
 
         <!-- Tag Filter -->
         <form method="GET" action="/community" class="filter">
@@ -182,7 +220,14 @@
             </script>
 
             <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+            <!-- going back function -->
+            <script>
+                function goBack() {
+                    window.location.href = 'main';
+                }
+            </script>
             <!-- going back function -->
             <script>
                 function goBack() {
@@ -195,7 +240,28 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSsNPGiel4VXi9zgbCfhYRgfdZrBZ3SD4&loading=async&callback=initMap"
                 async defer>
                 </script>
+            <!-- Google Maps API -->
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSsNPGiel4VXi9zgbCfhYRgfdZrBZ3SD4&loading=async&callback=initMap"
+                async defer>
+                </script>
 
+            <!-- bottom-to-top button -->
+            <script>
+                let mybutton = document.getElementById("myBtn");
+                window.onscroll = function () { scrollFunction() };
+                function scrollFunction() {
+                    // When the user scrolls down 30px from the top of the document, show the button
+                    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+                function topFunction() {
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
             <!-- bottom-to-top button -->
             <script>
                 let mybutton = document.getElementById("myBtn");
