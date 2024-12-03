@@ -4,7 +4,7 @@
 # Project Title
 # Comp 2800 - BBY29 
 # FitUp Mobile App
-# App Link - https://fitupapp.onrender.com
+# App Link - https://fitupapp-1mq2.onrender.com
 
 ## 2. Project Description
 Empower your fitness journey with FitUp, a smart AI-driven app, offering personalized tasks, real-time progress updates, and nutrition recommendations to achieve your goals alongside friends, so join FitUp today!
