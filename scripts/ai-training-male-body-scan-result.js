@@ -41,7 +41,14 @@ loader.load(
   },
   function (xhr) {
     //While it is loading, log the progress
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+    const loadScreen = document.getElementById("model-load-progress");
+		loadScreen.innerText = loadScreen.innerText = Math.floor((xhr.loaded / xhr.total) * 100) + "%";
+		console.log((xhr.loaded / xhr.total) * 100 + "%");
+
+		if((xhr.loaded / xhr.total) * 100 === 100.0)
+		{
+			loadScreen.style.display = 'none';
+		}
   },
   function (error) {
     //If there is an error, log it

@@ -83,7 +83,6 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 30px;
-    background-color: rgb(62, 61, 61);
     opacity: 0.8;
     top: 10px;
 }
@@ -239,4 +238,13 @@ video {
 
   .metrics {
     padding: 0 0 15px;
+  }
+
+  #model-load-progress {
+    text-align: center;
+    color: white;
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+    left: 50%;
   }
