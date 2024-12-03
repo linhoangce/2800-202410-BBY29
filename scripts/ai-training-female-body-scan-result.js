@@ -161,3 +161,9 @@ setTimeout(() => {
 		}, delay + (index + 1) * 500);
 	});
 }, 500);
+
+const homeBtn = document.getElementById("home");
+
+homeBtn.addEventListener("click", () => {
+	window.location.href = '/main';
+});
