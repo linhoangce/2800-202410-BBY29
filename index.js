@@ -115,7 +115,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
 /*********** connecting mongo ***************/
 async function connectToMongo() {
-	const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
+	const client = new MongoClient(mongoUri);
 
 	try {
 		await client.connect();
@@ -2561,3 +2561,5 @@ async function uploadImagesToCloudinary(files) {
 		}),
 	);
 }
+
+module.exports = app;
