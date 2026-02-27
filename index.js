@@ -69,6 +69,30 @@ async function initMongoDB() {
 }
 initMongoDB();
 
+// Configure session middleware
+app.use(
+	session({
+		secret: nodeSessionSecret,
+		resave: false,
+		saveUninitialized: false,
+		store: MongoStore.create({
+			mongoUrl: mongoUri,
+			dbName: "BBY29",
+			// crypto: {
+			// 	secret: nodeSessionSecret,
+			// 	algorithm: "aes-256-cbc",
+			// 	hash: {
+			// 		algorithm: "sha256",
+			// 		iterations: 1000,
+			// 	},
+			// },
+		}),
+		cookie: {
+			maxAge: 1 * 60 * 60 * 1000, // Session expiration (1 hour)
+		},
+	}),
+);
+
 /**
  * Route to upload images
  */
@@ -98,30 +122,6 @@ async function connectToMongo() {
 		console.log("Connected to MongoDB!");
 
 		const db = client.db("BBY29");
-
-		// Configure session middleware
-		app.use(
-			session({
-				secret: nodeSessionSecret,
-				resave: false,
-				saveUninitialized: false,
-				store: MongoStore.create({
-					mongoUrl: mongoUri,
-					dbName: "BBY29",
-					crypto: {
-						secret: nodeSessionSecret,
-						algorithm: "aes-256-cbc",
-						hash: {
-							algorithm: "sha256",
-							iterations: 1000,
-						},
-					},
-				}),
-				cookie: {
-					maxAge: 1 * 60 * 60 * 1000, // Session expiration (1 hour)
-				},
-			})
-		);
 
 		//Parsing the static folders
 		app.use("/scripts", express.static("./scripts"));
@@ -738,7 +738,6 @@ async function connectToMongo() {
 				return;
 			}
 			if (await bcrypt.compare(password, result[0].password)) {
-				console.log("correct password");
 				req.session.authenticated = true;
 				req.session.userId = result[0]._id;
 				req.session.username = result[0].username;
@@ -1734,7 +1733,7 @@ async function connectToMongo() {
 						content: userInput,
 					},
 				],
-				model: "mixtral-8x7b-32768",
+				model: "groq/compound",
 
 				// Set the rate of accuracy and precision for the answers
 				temperature: 0.3,
@@ -1753,11 +1752,9 @@ async function connectToMongo() {
 		// Express route to get a profile image by user id
 		app.get("/images/:userId", async (req, res) => {
 			try {
-				console.log("Session User ID: " + req.params.userId);
 				const userId = req.params.userId;
 				// Find the file in the MongoDB GridFS bucket by metadata userId
 				const files = await bucket.find({ "metadata.userId": userId }).toArray();
-				console.log("Files: " + files);
 				if (files.length === 0) {
 					// If no images found, serve the default image
 					const defaultImagePath = "./img/default-avatar.jpg";
@@ -1878,8 +1875,8 @@ async function connectToMongo() {
 				// Preprocess image URLs
 				const imageUrls = posts.map((post) =>
 					post.imageUrls.map((url) =>
-						cloudinary.url(url, { width: 1080, height: 1080, crop: "fill" })
-					)
+						cloudinary.url(url, { width: 1080, height: 1080, crop: "fill" }),
+					),
 				);
 
 				const postSuccess = req.session.postSuccess;
@@ -2050,7 +2047,7 @@ async function connectToMongo() {
 					post.imageUrls.map(async (url) => {
 						const publicId = url.split("/").pop().split(".")[0];
 						await cloudinary.uploader.destroy(publicId);
-					})
+					}),
 				);
 
 				// Delete post from MongoDB
@@ -2469,7 +2466,7 @@ async function saveImageToMongoDB(
 	userId,
 	width,
 	height,
-	allowOneImageOnly
+	allowOneImageOnly,
 ) {
 	try {
 		// Resize the image buffer to the specified width and height
@@ -2555,12 +2552,12 @@ async function uploadImagesToCloudinary(files) {
 										resolve(result.secure_url);
 									}
 									// End the upload stream with the resized image buffer
-								}
+								},
 							)
 							.end(resizedBuffer);
 					})
 					.catch((error) => reject(error));
 			});
-		})
+		}),
 	);
 }

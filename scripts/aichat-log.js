@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				null,
 				null,
 				"chat-avatar",
-				userAvatarClassName
+				userAvatarClassName,
 			);
 			appendChatMessage(false, aiResponse, "/img/default-avatar.jpg", "response-message");
 		}

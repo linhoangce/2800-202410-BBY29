@@ -20,6 +20,10 @@ body {
 	transition-duration: 0.4s;
 }
 
+#welcome-message {
+	color: white;
+}
+
 .shopitems {
 	font-size: 25pt;
 }
@@ -55,17 +59,17 @@ body {
 
 .login {
 	font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .index-form {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	padding: 12px 24px;
 	font-size: 16px;
-    width: 100%;
+	width: 100%;
 }
 
 .index-btn {
@@ -95,4 +99,92 @@ body {
 
 .resize {
 	font-size: 15px;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* background-color: #f4f7f6; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+	padding: 20px;
+}
+
+.logo {
+	width: 180px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.welcome-card {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #333;
+	margin-top: 0;
+	font-size: 1.4rem;
+}
+
+p {
+	font-size: 0.9rem;
+	color: #666;
+	line-height: 1.4;
+}
+
+.steps {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 0.85rem;
+	background: #f9f9f9;
+	padding: 10px;
+	border-radius: 8px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.actions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.index-btn {
+	width: 100%;
+	padding: 12px;
+	border-radius: 25px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.primary {
+	background-color: #ff8624;
+	color: white;
+}
+
+.secondary {
+	background-color: white;
+	color: #ff8624;
+	border: 2px solid #ff8624;
+}
+
+.index-btn:hover {
+	opacity: 0.8;
+	transform: translateY(-2px);
 }

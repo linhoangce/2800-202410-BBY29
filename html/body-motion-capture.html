@@ -13,7 +13,7 @@
   <!-- Require the peer dependencies of pose-detection. -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
   <!-- Alternatively you can use the WASM backend: <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.js"></script> -->
 
@@ -37,9 +37,7 @@
           stroke="white" stroke-width="2" stroke-linejoin="round" />
       </svg>
     </div>
-    <div id="coach-info">
-      Mixtral.AI Assistant
-    </div>
+    
     <div id="setting">
       <svg id="setting-icon" width="55" height="55" viewBox="0 0 24 24" fill="none"
         xmlns="http://www.w3.org/2000/svg">
